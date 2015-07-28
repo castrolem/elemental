@@ -28,8 +28,220 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="wrapper">
+      <main class="pattern-main">
+        <div class="pattern--style-guide__block">
+          <br>
+          <h2>Flexbox grid layout</h2>
+
+          <p>Percent based widths allow fluid resizing of columns and rows.</p>
+          <div class="row pattern--grid-system__row">
+            <div class="column-6-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+          <div class="row pattern--grid-system__row">
+            <div class="column-1-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-5-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+          <div class="row pattern--grid-system__row">
+            <div class="column-2-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-4-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+          <div class="row pattern--grid-system__row">
+            <div class="column-3-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-3-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+          <div class="row pattern--grid-system__row">
+            <div class="column-4-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-2-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+          <div class="row pattern--grid-system__row">
+            <div class="column-5-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-1-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+          <div class="row pattern--grid-system__row">
+            <div class="column-2-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-2-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+            <div class="column-2-6">
+              <div class="pattern--grid-system__inner"></div>
+            </div>
+          </div>
+        </div><!-- end of style-guide block -->
+
+        <div class="pattern--style-guide__block">
+          <h2>Alignment</h2>
+
+          <p>
+            Add classes to align elements to the start or end of a row as well as the top,
+            bottom, or center of a column
+          </p>
+
+          <h3>.start-</h3>
+
+          <div class="row">
+            <div class="column-6-6">
+              <div class="pattern-box pattern-box-container">
+                <div class="row start-xs">
+                  <div class="column-3-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
+          <h3>.center-</h3>
+
+          <div class="row">
+            <div class="column-6-6">
+              <div class="pattern-box pattern-box-container">
+                <div class="row center-xs">
+                  <div class="column-3-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>.end-</h3>
+
+          <div class="row">
+            <div class="column-6-6">
+              <div class="pattern-box pattern-box-container">
+                <div class="row end-xs">
+                  <div class="column-3-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Here is an example of using the modifiers in conjunction to acheive
+            different alignment at different viewport sizes.
+          </p>
+
+          <div class="row">
+            <div class="column-6-6">
+              <div class="pattern-box pattern-box-container">
+                <div class="row center-xs end-sm start-lg">
+                  <div class="column-3-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>.top-</h3>
+
+          <div class="row top-xs">
+            <div class="column-3-6">
+              <div class="pattern-box-large"></div>
+            </div>
+            <div class="column-3-6">
+              <div class="pattern-box"></div>
+            </div>
+          </div>
+
+          <h3>.middle-</h3>
+
+          <div class="row middle-xs">
+            <div class="column-3-6">
+              <div class="pattern-box-large"></div>
+            </div>
+            <div class="column-3-6">
+              <div class="pattern-box"></div>
+            </div>
+          </div>
+
+          <h3>.bottom-</h3>
+
+          <div class="row bottom-xs">
+            <div class="column-3-6">
+              <div class="pattern-box-large"></div>
+            </div>
+            <div class="column-3-6">
+              <div class="pattern-box"></div>
+            </div>
+          </div>
+
+        </div><!-- end of style-guide block -->
+
+        <div class="pattern--style-guide__block">
+          <h2>Distribution</h2>
+
+          <p>Add classes to distribute the contents of a row or column.</p>
+          <h3>.around-</h3>
+
+          <div class="row">
+            <div class="column-6-6">
+              <div class="pattern-box pattern-box-container">
+                <div class="row around-xs">
+                  <div class="column-2-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                  <div class="column-2-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                  <div class="column-2-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>.between-</h3>
+
+          <div class="row">
+            <div class="column-6-6">
+              <div class="pattern-box pattern-box-container">
+                <div class="row between-xs">
+                  <div class="column-2-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                  <div class="column-2-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                  <div class="column-2-6">
+                    <div class="pattern-box-nested"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of style-guide block -->
+      </main>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

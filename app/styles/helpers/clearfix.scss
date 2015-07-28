@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// CLEARFIX
+// Known support: Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+
+// Credits to Nicolas Gallagher
+// -----------------------------------------------------------------------------
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+// -----------------------------------------------------------------------------
+// CLEARFIX MIXIN
+// -----------------------------------------------------------------------------
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

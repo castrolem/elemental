@@ -1,0 +1,35 @@
+//------------------------------------------------------------------------------
+// #BODY
+//------------------------------------------------------------------------------
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+
+  //----------------------------------------------------------------------------
+  // #WITH-STICKY-FOOTER?
+  //----------------------------------------------------------------------------
+  @if $global--with-sticky-footer == 'true' {
+    @debug "$global--with-sticky-footer is #{$global--with-sticky-footer}";
+    margin: 0 0 $global--footer-height;
+  } @else {
+    margin: 0;
+  }
+
+  //----------------------------------------------------------------------------
+  // #WITH-NAVIGATION-BAR?
+  //----------------------------------------------------------------------------
+  @if $global--with-navigation-bar == 'true' {
+    @debug "$global--with-navigation-bar is #{$global--with-navigation-bar}";
+    padding: round($global--navigation-height*1.25) 0 0;
+  } @else {
+    padding: 0;
+  }
+}

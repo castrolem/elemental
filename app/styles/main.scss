@@ -1,9 +1,40 @@
 // bower:scss
 // endbower
+//------------------------------------------------------------------------------
+// #MAIN.SCSS
+// This file contains in order the imports of the different files needed to
+// use the Elements Framework, if you need to modify something. Please follow
+// this steps:
+//
+// * [1] Open `settings/config.scss` to change the CSS output.
+// * [2] Open `settings/variables.scss` to change colours, sizes, etc.
+// * [3] Open `settings/typography.scss` to change font-family or others.
+//
+//------------------------------------------------------------------------------
+// #HELPERS
+//------------------------------------------------------------------------------
+@import 'helpers/clearfix.scss';
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+//------------------------------------------------------------------------------
+// #GENERICS
+//------------------------------------------------------------------------------
+@import 'generics/box-sizing.scss';
+
+//------------------------------------------------------------------------------
+// #SETTINGS
+//------------------------------------------------------------------------------
+@import 'settings/sizes.scss';
+@import 'settings/config.scss';
+
+//------------------------------------------------------------------------------
+// #LAYOUTS
+//------------------------------------------------------------------------------
+@import 'layouts/body.scss';
+@import 'layouts/grid.scss';
+
+//------------------------------------------------------------------------------
+// #PATTERN-LIBRARY
+//------------------------------------------------------------------------------
+@if ($style-guide: true) {
+  @import 'pattern-library.scss'
 }

@@ -1,0 +1,187 @@
+//------------------------------------------------------------------------------
+// #GRIDS
+//------------------------------------------------------------------------------
+// #WRAPPERS
+//------------------------------------------------------------------------------
+.wrapper {
+  margin: 0 auto;
+  max-width: $global--max-width-of-grid;
+
+  @media (max-width: $global--max-width-of-grid) {
+    padding: 0 $pad;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #ROWS
+//------------------------------------------------------------------------------
+.row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -$space-for-grid-adjustment;
+  margin-left: -$space-for-grid-adjustment;
+}
+
+//------------------------------------------------------------------------------
+// #COLUMN-SET
+//------------------------------------------------------------------------------
+[class^='column-'] {
+  flex: 0 0 auto;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+  padding: 0 $space-for-grid-adjustment;
+}
+
+
+//------------------------------------------------------------------------------
+// #DESKTOP-COLUMNS
+//------------------------------------------------------------------------------
+$calc--with: 100%;
+
+@for $i from 1 through $global--amount-of-columns-desktop {
+  @for $j from 1 through $global--amount-of-columns-desktop {
+    .column-#{$i}-#{$j} {
+      $width: ($calc--with / $j) * $i;
+
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #TABLET-COLUMNS
+//------------------------------------------------------------------------------
+@media (max-width: $venti) {
+  @for $i from 1 through $global--amount-of-columns-tablet {
+    @for $j from 1 through $global--amount-of-columns-tablet {
+      .column-tablet-#{$i}-#{$j} {
+        $width: ($calc--with / $j) * $i;
+
+        flex-basis: $width;
+        max-width: $width;
+      }
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #MOBILE-COLUMNS
+//------------------------------------------------------------------------------
+@media (max-width: $venti) {
+  @for $i from 1 through $global--amount-of-columns-mobile {
+    @for $j from 1 through $global--amount-of-columns-mobile {
+      .column-mobile-#{$i}-#{$j} {
+        $width: ($calc--with / $j) * $i;
+
+        flex-basis: $width;
+        max-width: $width;
+      }
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #HIDE-SHOW--HELPERS
+//------------------------------------------------------------------------------
+@if ($use--show-helpers == 'true') {
+  .hide--mobile {
+    @media (max-width: $tall) {
+      display: none;
+    }
+  }
+
+
+  .hide--tablet {
+    @media (min-width: $tall) and (max-width: $venti) {
+      display: none;
+    }
+  }
+
+
+  .hide--desktop {
+    @media (min-width: $venti) {
+      display: none;
+    }
+  }
+
+
+  .show--mobile {
+    @media (max-width: $tall) {
+      display: block;
+    }
+  }
+
+
+  .show--tablet {
+    @media (min-width: $tall) and (max-width: $venti) {
+      display: block;
+    }
+  }
+
+
+  .show--desktop {
+    @media (min-width: $venti) {
+      display: block;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// #ORDERING--HELPERS
+//------------------------------------------------------------------------------
+$resolutions: 'xs', 'sm', 'md', 'lg';
+
+@if ($use--ordering-helpers == 'true') {
+  @each $resolution in $resolutions {
+    .start-#{$resolution} {
+      justify-content: flex-start;
+      text-align: start;
+    }
+
+    .center-#{$resolution} {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .end-#{$resolution} {
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    .top-#{$resolution} {
+      align-items: flex-start;
+    }
+
+    .middle-#{$resolution} {
+      align-items: center;
+    }
+
+    .bottom-#{$resolution} {
+      align-items: flex-end;
+    }
+
+    .around-#{$resolution} {
+      justify-content: space-around;
+    }
+
+    .between-#{$resolution} {
+      justify-content: space-between;
+    }
+
+    .first-#{$resolution} {
+      order: -1;
+    }
+
+    .last-#{$resolution} {
+      order: 1;
+    }
+  }
+}

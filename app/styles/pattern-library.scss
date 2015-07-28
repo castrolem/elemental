@@ -1,0 +1,219 @@
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+$better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
+                   "Helvetica Neue", Helvetica, Arial,
+                   "Lucida Grande", sans-serif;
+
+//------------------------------------------------------------------------------
+// #GRID
+//------------------------------------------------------------------------------
+.pattern--grid-system__row {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #E7F2FA;
+}
+
+.pattern--grid-system__inner {
+  background-color: #67AFE0;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.pattern-box,
+.pattern-box-first,
+.pattern-box-large,
+.pattern-box-nested,
+.pattern-box-row {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: #E7F2FA;
+  border: 1px solid darken(#E7F2FA, 5%);
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.pattern-box-nested {
+  background: #67AFE0;
+  border-color: darken(#67AFE0, 10%);
+}
+
+.pattern-box-large {
+  height: 8rem;
+}
+
+//------------------------------------------------------------------------------
+// #PATTERN--COLOURS
+//------------------------------------------------------------------------------
+
+.pattern--colours {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    border: 1px solid lighten(gray, 15%);
+    display: inline-block;
+    margin: $space-quarter auto;
+    padding: $pad-quarter;
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: 40em) {
+      width: auto;
+    }
+  }
+}
+
+
+.color--block {
+  $color--block--size: 40px;
+
+  display: inline-block;
+  height: $color--block--size;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: 40em) {
+    $color--block--size: 70px;
+
+    display: block;
+    height: $color--block--size;
+    width: $color--block--size;
+  }
+}
+
+
+.color--name,
+.color--label {
+  display: inline;
+  font-family: $better-helvetica;
+  font-size: 80%;
+  padding: $pad-quarter 0 0;
+
+  @media (min-width: 40em) {
+    display: block;
+  }
+}
+
+
+.color--name {
+  text-transform: capitalize;
+  font-size: 70%;
+}
+
+.color--label {
+  text-transform: uppercase;
+}
+
+//------------------------------------------------------------------------------
+// #PATTERN MAIN STYLES
+//------------------------------------------------------------------------------
+
+.body {
+  background: #fefefe;
+  font-size: 16px;
+}
+
+
+.pattern--style-guide__block {margin: 0 auto;}
+
+
+.pattern--main {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+
+
+//------------------------------------------------------------------------------
+// #PATTERN--BLOCKS
+//------------------------------------------------------------------------------
+
+.pattern--item {
+
+
+  .pattern--block__title {
+    border-bottom: 1px solid gray;
+    font-family: $better-helvetica;
+    font-size: 100%;
+    font-weight: normal;
+    margin: $space-double auto $space;
+    padding: $pad-half $pad-quarter;
+    text-transform: capitalize;
+
+    &.pattern--block__title--code {
+      border: 1px solid gray;
+      margin: $space-double 0 0;
+      padding: $pad-half;
+    }
+  }
+
+
+  > .pattern--block__body {
+    padding: $pad-half;
+  }
+}
+
+//------------------------------------------------------------------------------
+// #PATTERN--TYPOGRAPHY
+//------------------------------------------------------------------------------
+
+.pattern--title,
+.pattern--paragraph,
+.pattern--lists,
+.pattern-link {
+  font-family: $better-helvetica;
+  font-weight: normal;
+}
+
+.pattern--paragraph,
+.pattern--lists,
+.pattern-link {
+  font-size: 95%;
+}
+
+.pattern--title {
+  border-bottom: 1px solid gray;
+  font-size: 160%;
+  margin: $space-double auto $space;
+  padding: $pad-half $pad-quarter;
+}
+
+
+.pattern--paragraph {
+  margin: $space auto $space-half;
+  padding: $pad-half $pad-quarter;
+}
+
+
+.pattern--lists {
+  margin: $space-half auto $space;
+}
+
+
+.pattern-link {
+  text-decoration: none;
+}
+
+
+code.language-markup,
+pre.language-markup {
+  font-size: 90%;
+  tab-size: 2;
+  white-space: pre;
+  padding: $pad-quarter;
+}
+
+
+pre.language-markup {
+  border: 1px solid gray;
+  border-top: 0;
+  margin: 0 !important;
+}
