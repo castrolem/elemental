@@ -1,0 +1,185 @@
+//------------------------------------------------------------------------------
+// #TYPOGRAPHY
+//------------------------------------------------------------------------------
+// [1] This is the baseline for other fonts, because we're using a percentage
+//     approach for headings and paragraphs fonts.
+
+body { font-size: $global--font-size; } // [1]
+
+
+//------------------------------------------------------------------------------
+// #BASIC-TEXT
+//------------------------------------------------------------------------------
+
+@mixin font--primary($size: 14px, $weight: 300, $letter: 1px, $line: 1.5) {
+  font-family: $primary--font-family;
+  font-size: calc-percent($size, $global--font-size);
+  font-weight: $weight;
+  letter-spacing: $letter;
+  line-height: $line;
+}
+
+@mixin font--secondary($size: 12px, $weight: 400, $letter: 1px, $line: 1.5) {
+  font-family: $secondary--font-family;
+  font-size: calc-percent($size, $global--font-size);
+  font-weight: $weight;
+  letter-spacing: $letter;
+  line-height: $line;
+  text-transform: uppercase;
+}
+
+.font--primary {
+  @include font--primary();
+}
+.font--secondary {
+  @include font--secondary();
+}
+
+p, .p,
+ul, .ul,
+ol, .ol,
+label, .label {
+  @include font--primary();
+}
+
+label, .label {
+  @include font--secondary();
+}
+
+time {
+  color: lighten($coat, 30%)
+}
+
+p, .p {
+  color: lighten($coat, 5%);
+  margin-bottom: $space;
+}
+
+a, .link {
+  font-family: $primary--font-family;
+}
+
+label {
+  display: block;
+  padding-bottom: $pad-half;
+}
+
+
+//------------------------------------------------------------------------------
+// #HEADINGS-TEXT
+//------------------------------------------------------------------------------
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+blockquote, .blockquote {
+  @include font--secondary($weight: 200);
+  color: saturate($coat, 45%);
+  cursor: default;
+  margin: $space-half auto;
+}
+
+h1, .h1 {
+  font-size: 180%;
+  @media (min-width: $grande) {
+    font-size: 250%;
+  }
+}
+
+h2, .h2 {
+  font-size: 150%;
+  @media (min-width: $grande) {
+    font-size: 200%;
+  }
+}
+
+h3, .h3 {
+  font-size: 125%;
+  @media (min-width: $grande) {
+    font-size: 160%;
+  }
+}
+
+h4, .h4 {
+  font-size: 115%;
+  @media (min-width: $grande) {
+    font-size: 130%;
+  }
+}
+
+h5, .h5 {
+  font-size: 105%;
+  @media (min-width: $grande) {
+    font-size: 115%;
+  }
+}
+
+h6, .h6 {
+  font-size: 85%;
+
+  @media (min-width: $grande) {
+    font-size: 90%;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #BLOCKQUOTE-TEXT
+//------------------------------------------------------------------------------
+
+blockquote, .blockquote {
+  padding: $pad-half $pad;
+  border-left: 5px solid $base;
+}
+
+
+//------------------------------------------------------------------------------
+// #INLINE-ELEMENTS
+//------------------------------------------------------------------------------
+
+abbr {
+  border-bottom: 1px dotted $base;
+  cursor: help;
+}
+
+
+mark {
+  background-color: $base;
+  color: white;
+}
+
+
+//------------------------------------------------------------------------------
+// #NO-STYLE
+//------------------------------------------------------------------------------
+
+ul.no-style,
+ol.no-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+//------------------------------------------------------------------------------
+// #COLOURS FOR TEXTS
+//------------------------------------------------------------------------------
+
+.base     { color: $base; }
+.accent   { color: $accent; }
+.success  { color: $success--colour; }
+.error    { color: $error--colour; }
+.disabled { color: $disabled--colour; }
+.white    { color: $white; }
+
+
+//------------------------------------------------------------------------------
+// #HELPERS FOR TEXTS
+//------------------------------------------------------------------------------
+
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }

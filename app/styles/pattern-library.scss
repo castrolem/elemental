@@ -60,8 +60,8 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
   > li {
     border: 1px solid lighten(gray, 15%);
     display: inline-block;
-    margin: $space-quarter auto;
-    padding: $pad-quarter;
+    margin: .25rem auto;
+    padding: .25rem;
     text-align: center;
     width: 100%;
 
@@ -95,7 +95,7 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
   display: inline;
   font-family: $better-helvetica;
   font-size: 80%;
-  padding: $pad-quarter 0 0;
+  padding: .25rem 0 0;
 
   @media (min-width: 40em) {
     display: block;
@@ -144,20 +144,20 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
     font-family: $better-helvetica;
     font-size: 100%;
     font-weight: normal;
-    margin: $space-double auto $space;
-    padding: $pad-half $pad-quarter;
+    margin: 2rem auto 1rem;
+    padding: .5rem .25rem;
     text-transform: capitalize;
 
     &.pattern--block__title--code {
       border: 1px solid gray;
-      margin: $space-double 0 0;
-      padding: $pad-half;
+      margin: 2rem 0 0;
+      padding: .5rem;
     }
   }
 
 
   > .pattern--block__body {
-    padding: $pad-half;
+    padding: .5rem;
   }
 }
 
@@ -182,19 +182,19 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 .pattern--title {
   border-bottom: 1px solid gray;
   font-size: 160%;
-  margin: $space-double auto $space;
-  padding: $pad-half $pad-quarter;
+  margin: 2rem auto 1rem;
+  padding: .5rem .25rem;
 }
 
 
 .pattern--paragraph {
-  margin: $space auto $space-half;
-  padding: $pad-half $pad-quarter;
+  margin: 1rem auto 1rem-half;
+  padding: .5rem .25rem;
 }
 
 
 .pattern--lists {
-  margin: $space-half auto $space;
+  margin: 1rem-half auto 1rem;
 }
 
 
@@ -208,7 +208,7 @@ pre.language-markup {
   font-size: 90%;
   tab-size: 2;
   white-space: pre;
-  padding: $pad-quarter;
+  padding: .25rem;
 }
 
 

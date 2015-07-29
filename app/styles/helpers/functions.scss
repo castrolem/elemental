@@ -1,0 +1,13 @@
+//------------------------------------------------------------------------------
+// #CALC-PERCENT
+//------------------------------------------------------------------------------
+@function calc-percent($target, $container) {
+  @if type-of($target) == "number" and type-of($container) == "number" {
+    $number: $target / ($target * 0 + 1);
+    $global: $container / ($container * 0 + 1);
+    @return ($number / $global) * 100%;
+  } @else {
+    @warn "Not a number value in target: #{$target} or container: #{$container}";
+    @return $target;
+  }
+}
