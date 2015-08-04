@@ -4,13 +4,13 @@
 // #BODY-CONFIG
 // Adds different states to `<body></body>`.
 //------------------------------------------------------------------------------
-$global--with-sticky-footer:          true;
-$global--with-navigation-bar:         true;
+$global--with-sticky-footer:          'false';
+$global--with-navigation-bar:         'false';
 
 //------------------------------------------------------------------------------
 // #FILE-CONFIG
 //------------------------------------------------------------------------------
-$style-guide:                         true;
+$style-guide:                         'true';
 
 //------------------------------------------------------------------------------
 // #FONT
@@ -41,5 +41,5 @@ $global--indent:                      9999em;
 // #HELPERS-CONFIG
 // Adss helper classes to the GRID
 //------------------------------------------------------------------------------
-$use--show-helpers:                   true;
-$use--ordering-helpers:               true;
+$use--show-helpers:                   'true';
+$use--ordering-helpers:               'true';

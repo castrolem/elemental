@@ -2,20 +2,13 @@
 // #COLOURS-SETTINGS
 //------------------------------------------------------------------------------
 
-$strawberry:        #F84545;
-$punch:             #E2472E;
-$first-blood:       #CC0000;
-$lagoon:            #02BAF2;
-$overboard:         #009DCD;
-$banana:            #FAD46B;
-$doubloon:          #F3BC65;
-$bruise:            #A88CD5;
-$sugar-plum:        #9175BD;
-$emerald-cove:      #3EB5AC;
-$landlubber:        #28948C;
-$spring-wood:       #F8F9F1;
-$wild-sand:         #F7F7F7;
-
+$strawberry:                  #EB4336;
+$strawberry-dark:             darken(#EB4336, 5%);
+$blue-da-france:              #378BEB;
+$blue-da-france-dark:         darken(#378BEB, 5%);
+// body {
+//   background-color: $blue-da-france-dark !important;
+// }
 
 //------------------------------------------------------------------------------
 // #FITFTY-SHADES-OF-BLUE
@@ -23,10 +16,6 @@ $wild-sand:         #F7F7F7;
 
 $black-flag:        #364347;
 $gunpowder:         #5E696D;
-$pieces-of-eight:   #93A4AA;
-$cutlass:           #B2C6CD;
-$coral:             #D6E1E5;
-$coastal-surf:      #E1EEF3;
 
 //------------------------------------------------------------------------------
 // #ELEMENTAL-COLOURS
@@ -40,8 +29,8 @@ $black:             #111111;
 // #BASE-COLOURS
 //------------------------------------------------------------------------------
 
-$base:              lighten($emerald-cove, 5%);
-$accent:            $lagoon;
+$base:              $strawberry;
+$accent:            $strawberry-dark;
 $coat:              $black-flag;
 
 
@@ -49,7 +38,7 @@ $coat:              $black-flag;
 // #PLIGHT-COLOURS
 //------------------------------------------------------------------------------
 
-$success--colour:   $landlubber;
-$warning--colour:   $banana;
-$error--colour:     $first-blood;
-$disabled--colour:  $coral;
+// $success--colour:   $landlubber;
+// $warning--colour:   $banana;
+// $error--colour:     $first-blood;
+// $disabled--colour:  $coral;

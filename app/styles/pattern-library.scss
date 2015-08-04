@@ -11,11 +11,11 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 .pattern--grid-system__row {
   padding-top: .5rem;
   padding-bottom: .5rem;
-  background-color: #E7F2FA;
+  background-color: lighten(#72AAF0, 15%);
 }
 
 .pattern--grid-system__inner {
-  background-color: #67AFE0;
+  background-color: #378BEB;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -30,8 +30,8 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
   box-sizing: border-box;
   min-height: 1rem;
   margin-bottom: 0;
-  background: #E7F2FA;
-  border: 1px solid darken(#E7F2FA, 5%);
+  background: lighten(#72AAF0, 15%);
+  border: 1px solid #72AAF0;
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
@@ -40,8 +40,8 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 }
 
 .pattern-box-nested {
-  background: #67AFE0;
-  border-color: darken(#67AFE0, 10%);
+  background: #378BEB;
+  border-color: darken(#378BEB, 10%);
 }
 
 .pattern-box-large {
@@ -58,7 +58,6 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
   padding: 0;
 
   > li {
-    border: 1px solid lighten(gray, 15%);
     display: inline-block;
     margin: .25rem auto;
     padding: .25rem;
@@ -75,10 +74,24 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 .color--block {
   $color--block--size: 40px;
 
+  border-radius: 50%;
   display: inline-block;
   height: $color--block--size;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+
+  .color--block__variant {
+    height: $color--block--size;
+    left: 0;
+    position: absolute;
+    width: 50%;
+
+    & + .color--block__variant {
+      left: 50%;
+    }
+  }
 
   @media (min-width: 40em) {
     $color--block--size: 70px;
@@ -86,12 +99,15 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
     display: block;
     height: $color--block--size;
     width: $color--block--size;
+
+    .color--block__variant {
+      height: $color--block--size;
+    }
   }
 }
 
 
-.color--name,
-.color--label {
+.color--name {
   display: inline;
   font-family: $better-helvetica;
   font-size: 80%;
@@ -106,10 +122,6 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 .color--name {
   text-transform: capitalize;
   font-size: 70%;
-}
-
-.color--label {
-  text-transform: uppercase;
 }
 
 //------------------------------------------------------------------------------
@@ -216,4 +228,34 @@ pre.language-markup {
   border: 1px solid gray;
   border-top: 0;
   margin: 0 !important;
+}
+
+//------------------------------------------------------------------------------
+// #PATTERN--NAV
+//------------------------------------------------------------------------------
+.pattern--nav {
+  padding: .5rem 1rem;
+
+  a {
+    color: rgba(#333, .9);
+    display: block;
+    padding: .25rem .5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #PATTERN--DOCUMENTATION-HEADER
+//------------------------------------------------------------------------------
+.pattern--documentation-header {
+  background-color: darken(#378BEB, 5%);
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+
+  h2,
+  p {
+    color: white;
+  }
 }
