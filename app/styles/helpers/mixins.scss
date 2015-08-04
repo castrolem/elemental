@@ -1,0 +1,19 @@
+//------------------------------------------------------------------------------
+// #SINGLE-TRANSITION
+//------------------------------------------------------------------------------
+@mixin single-transition($property: all, $timing: .218s, $ease: ease-in-out, $delay: false) {
+  @if (type-of($delay) == 'number') {
+    transition: $property $timing $ease $delay;
+  } @else {
+    transition: $property $timing $ease;
+  }
+}
+
+//------------------------------------------------------------------------------
+// #LIST-RESET
+//------------------------------------------------------------------------------
+@mixin list-reset() {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}

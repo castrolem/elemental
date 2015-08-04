@@ -1,0 +1,102 @@
+//------------------------------------------------------------------------------
+// #FORMS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+$input--border-animation: $global--border-animation;
+
+
+//------------------------------------------------------------------------------
+// #FIELDSET
+//------------------------------------------------------------------------------
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  ul,
+  ol {
+    @include list-reset;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #GENERAL
+//------------------------------------------------------------------------------
+input,
+textarea,
+select {
+  @include single-transition();
+  @include font--primary();
+  display: inline-block;
+  padding: $pad-half $pad;
+  color: $global--font-color;
+  background-color: white;
+  background-image: none;
+  border: 0;
+  border-bottom: $input--border-animation solid lighten($gunpowder, 45%);
+  outline: 0;
+
+  .field--container & {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #FIELD--CONTAINER
+//------------------------------------------------------------------------------
+.field--container {
+  position: relative;
+
+  &:hover {
+    label::after {
+      visibility: visible;
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  label {
+    padding-top: $pad;
+
+    &:empty {
+      padding: 0;
+    }
+
+    &::after {
+      @include single-transition($ease: cubic-bezier(.4,0,.2,1));
+      background-color: $base;
+      bottom: 0;
+      content: ' ';
+      height: $input--border-animation;
+      left: 45%;
+      position: absolute;
+      visibility: hidden;
+      width: 10px;
+    }
+  }
+
+  label ~ input:focus,
+  label ~ textarea:focus {
+    border-bottom: $input--border-animation solid $base;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #RESETS
+//------------------------------------------------------------------------------
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  height: 39px;
+}

@@ -77,7 +77,7 @@ h5, .h5,
 h6, .h6,
 blockquote, .blockquote {
   @include font--secondary($weight: 200);
-  color: saturate($coat, 45%);
+  color: $global--font-color;
   cursor: default;
   margin: $space-half auto;
 }

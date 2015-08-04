@@ -15,6 +15,7 @@
 //------------------------------------------------------------------------------
 @import 'helpers/clearfix.scss';
 @import 'helpers/functions.scss';
+@import 'helpers/mixins.scss';
 
 //------------------------------------------------------------------------------
 // #GENERICS
@@ -25,8 +26,8 @@
 // #SETTINGS
 //------------------------------------------------------------------------------
 @import 'settings/sizes.scss';
-@import 'settings/config.scss';
 @import 'settings/colours.scss';
+@import 'settings/config.scss';
 
 //------------------------------------------------------------------------------
 // #LAYOUTS
@@ -38,6 +39,7 @@
 // #OBJECTS
 //------------------------------------------------------------------------------
 @import 'objects/typography.scss';
+@import 'objects/forms.scss';
 
 //------------------------------------------------------------------------------
 // #PATTERN-LIBRARY
