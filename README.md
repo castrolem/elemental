@@ -1,5 +1,5 @@
 # Elements Framework
-It's a CSS framework that's sleep and powerful for faster and easier web development of beautiful UI's and with UX in mind, coded with SASS, available to download in both SASS (with SCSS) and CSS compiled.
+It's a CSS framework that's sleek and powerful for faster and easier web development of beautiful UI's and with UX in mind, coded with SASS, available to download in both SASS (with SCSS) and CSS compiled.
 
 ## Quick start
 * Download the latest release from .

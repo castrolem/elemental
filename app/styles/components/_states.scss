@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------------
+// #FORMS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// #FORMS
+//------------------------------------------------------------------------------
+.field--container {
+
+  &.error,
+  &.valid {
+    label::after {
+      visibility: visible;
+      width: 100%;
+      left: 0;
+    }
+
+    input,
+    textarea {
+
+      &:focus {
+        background-color: white;
+      }
+    }
+  }
+
+  &.error {
+    input {
+      background-color: lighten($error, 40%);
+    }
+
+    label::after {
+      background-color: $error;
+    }
+  }
+
+  &.valid {
+    input {
+      background-color: lighten($valid, 40%);
+    }
+
+    label::after {
+      background-color: $valid;
+    }
+  }
+}

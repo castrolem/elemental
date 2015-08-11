@@ -278,6 +278,13 @@
                       </div>
                       <div class="color--name">blue da france</div>
                     </li><!-- color block -->
+                    <li>
+                      <div class="color--block">
+                        <div class="color--block__variant" style="background: #7DD800;"></div>
+                        <div class="color--block__variant" style="background: #79C700;"></div>
+                      </div>
+                      <div class="color--name">lima</div>
+                    </li><!-- color block -->
                   </ul>
                 </div>
               </div>
@@ -450,13 +457,13 @@
                       <label for="textarea">Textarea</label>
                       <textarea id="textarea" rows="4" cols="48" placeholder="Enter your message here"></textarea>
                     </div>
-                    <div class="field--container">
-                      <label class="error">Error Input</label>
-                      <input class="error" type="text" placeholder="Text Input">
+                    <div class="field--container error">
+                      <label>Error Input</label>
+                      <input type="text" placeholder="Text Input">
                     </div>
-                    <div class="field--container">
-                      <label class="success">Success Input</label>
-                      <input class="success" type="text" placeholder="Text Input">
+                    <div class="field--container valid">
+                      <label>Success Input</label>
+                      <input type="text" placeholder="Text Input">
                     </div>
                   </fieldset>
                 </div>
@@ -489,9 +496,9 @@
                   checkbox
                 </h2>
                 <div class="pattern--block__body">
-                  <form action="#">
-                    <fieldset class="options">
-                      <legend>Checkbox <abbr title="Required">*</abbr></legend>
+                  <form class="pattern--form" action="#">
+                    <fieldset class="pattern--fieldset options">
+                      <legend class="patter--legend">Default HTML <abbr title="Default views can't be styled">*</abbr></legend>
                       <ul>
                         <li>
                           <label for="checkbox1">
@@ -506,6 +513,29 @@
                         <li>
                           <label for="checkbox3">
                             <input id="checkbox3" name="checkbox" type="checkbox"> Choice C
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                    <fieldset class="pattern--fieldset options">
+                      <legend class="patter--legend">Custom HTML <abbr title="Easier to customize">*</abbr></legend>
+                      <ul>
+                        <li>
+                          <label class="custom-checkbox" for="checkbox4">
+                            <input id="checkbox4" name="checkbox" type="checkbox" checked="checked">
+                            <span>Choice D</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="custom-checkbox" for="checkbox5">
+                            <input id="checkbox5" name="checkbox" type="checkbox">
+                            <span>Choice E</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="custom-checkbox" for="checkbox6">
+                            <input id="checkbox6" name="checkbox" type="checkbox">
+                            <span>Choice F</span>
                           </label>
                         </li>
                       </ul>

@@ -6,8 +6,10 @@ $strawberry:                  #EB4336;
 $strawberry-dark:             darken(#EB4336, 5%);
 $blue-da-france:              #378BEB;
 $blue-da-france-dark:         darken(#378BEB, 5%);
+$lima:                        #7DD800;
+$lima-dark:                   darken(#7DD800, 5%);
 // body {
-//   background-color: $blue-da-france-dark !important;
+//   background-color: $lima-dark !important;
 // }
 
 //------------------------------------------------------------------------------
@@ -16,6 +18,7 @@ $blue-da-france-dark:         darken(#378BEB, 5%);
 
 $black-flag:        #364347;
 $gunpowder:         #5E696D;
+$mist:              #BACAD5;
 
 //------------------------------------------------------------------------------
 // #ELEMENTAL-COLOURS
@@ -38,7 +41,7 @@ $coat:              $black-flag;
 // #PLIGHT-COLOURS
 //------------------------------------------------------------------------------
 
-// $success--colour:   $landlubber;
+$valid:             $lima;
 // $warning--colour:   $banana;
-// $error--colour:     $first-blood;
+$error:             $strawberry;
 // $disabled--colour:  $coral;

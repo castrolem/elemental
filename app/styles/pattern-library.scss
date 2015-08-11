@@ -259,3 +259,31 @@ pre.language-markup {
     color: white;
   }
 }
+
+//------------------------------------------------------------------------------
+// #PATTERN--FORMS
+//------------------------------------------------------------------------------
+
+.pattern--form {
+  &::before, &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  .patter--legend {
+    padding-bottom: 1rem;
+  }
+
+  .pattern--fieldset:last-child {
+    margin-right: 0;
+  }
+}
+
+.pattern--fieldset {
+  float: left;
+  margin-right: 2rem;
+}

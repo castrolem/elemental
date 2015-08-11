@@ -27,16 +27,16 @@ fieldset {
 input,
 textarea,
 select {
-  @include single-transition();
   @include font--primary();
-  display: inline-block;
-  padding: $pad-half $pad;
-  color: $global--font-color;
+  @include single-transition();
   background-color: white;
   background-image: none;
   border: 0;
   border-bottom: $input--border-animation solid lighten($gunpowder, 45%);
+  color: $global--font-color;
+  display: inline-block;
   outline: 0;
+  padding: $pad-half $pad;
 
   .field--container & {
     display: block;
@@ -98,5 +98,68 @@ textarea {
 }
 
 select {
+  appearance: none;
+  border-radius: 0;
   height: 39px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    $size: 15px;
+
+    height: $size;
+    position: relative;
+    top: 2px;
+    width: $size;
+}
+
+
+//------------------------------------------------------------------------------
+// #LEGENDS
+//------------------------------------------------------------------------------
+legend {
+  @include font--primary();
+}
+
+
+//------------------------------------------------------------------------------
+// #CUSTOM-CHECKBOX
+//------------------------------------------------------------------------------
+
+.custom-checkbox {
+
+  > input {
+    @include invisible();
+  }
+
+  input {
+
+    + span {
+      $size: 15px;
+
+      padding-left: $size + 7px;
+      position: relative;
+
+      &::before {
+        @include single-transition();
+        background-color: $mist;
+        border: 1px solid darken($mist, 5%);
+        color: white;
+        content: ' ';
+        font: normal normal normal 10px/1 FontAwesome;
+        height: $size;
+        left: 0;
+        padding: #{($size/$size)}px round($size / 10);
+        position: absolute;
+        width: $size;
+      }
+    }
+
+    &:checked + span::before {
+      background-color: $base;
+      border-color: darken($base, 5%);
+      content: "\f00c";
+      border-radius: 50%;
+    }
+  }
 }

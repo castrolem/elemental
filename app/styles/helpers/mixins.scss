@@ -17,3 +17,32 @@
   margin: 0;
   list-style-type: none;
 }
+
+
+//------------------------------------------------------------------------------
+// #INVISIBLE
+//------------------------------------------------------------------------------
+@mixin invisible($state: true) {
+  @if ($state == true) {
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    visibility: hidden;
+  } @else {
+    max-height: auto;
+    max-width: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #KEYFRAME-ANIMATION
+//------------------------------------------------------------------------------
+@mixin keyframe-animation($animation-name) {
+  @-webkit-keyframes #{$animation-name} { @content; }
+  @-moz-keyframes #{$animation-name} { @content; }
+  @-o-keyframes #{$animation-name} { @content; }
+  @keyframes #{$animation-name} { @content; }
+}
