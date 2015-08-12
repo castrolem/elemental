@@ -1,0 +1,155 @@
+//------------------------------------------------------------------------------
+// #BUTTONS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+$buttons-flat:                      $global--buttons-flat;
+$buttons-raised:                    $global--buttons-raised;
+$buttons-link:                      $global--buttons-link;
+$buttons-icon:                      $global--buttons-icon;
+
+$button-size:                       39px;
+
+//------------------------------------------------------------------------------
+// #GENERAL-BUTTONS
+//------------------------------------------------------------------------------
+.button {
+  @include font--primary();
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  color: currentColor;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 39px;
+  margin: $space-half ($space-half * 1.25);
+  min-height: $button-size;
+  min-width: 88px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 $pad-half;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1),
+              background-color .4s cubic-bezier(.25, .8, .25, 1);
+  transform: translateZ(0);
+  user-select: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+//------------------------------------------------------------------------------
+// #FLAT-BUTTONS
+//------------------------------------------------------------------------------
+@if ($buttons-flat == 'true') {
+  .button {
+
+    &.primary {
+      color: $base;
+    }
+
+    &.error {
+      color: $error;
+    }
+
+    &.valid {
+      color: $valid;
+    }
+
+    &[disabled] {
+      color: rgba($black, .3);
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #RAISED-BUTTONS
+//------------------------------------------------------------------------------
+@if ($buttons-raised == 'true') {
+  .button {
+
+    &.raised {
+      background-color: darken(white, 5%);
+      color: rgba($black, .8);
+
+      &.primary {
+        background-color: $base;
+        color: white;
+      }
+
+      &.error {
+        background-color: $error;
+        color: white;
+      }
+
+      &.valid {
+        background-color: $valid;
+        color: white;
+      }
+
+      &[disabled] {
+        color: rgba($black, .3);
+        cursor: not-allowed;
+      }
+
+      &:not([disabled]) {
+        box-shadow: 0 2px 5px 0 rgba($black, .25);
+      }
+
+      &:not([disabled]).raised:active {
+        box-shadow: 0 4px 8px 0 rgba($black, .4);
+      }
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #ICON-BUTTONS
+//------------------------------------------------------------------------------
+@if ($buttons-icon == 'true') {
+  .button {
+
+    &.icon {
+      border-radius: 50%;
+      font-size: calc-percent(16px, $global--font-size);
+      min-width: $button-size;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// #BUTTON-ANIMATION
+//------------------------------------------------------------------------------
+@include keyframe-animation(ripple) {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+.ink {
+  background: currentColor;
+  border-radius: 100%;
+  display: block;
+  opacity: .6;
+  outline: none;
+  position: absolute;
+  transform: scale(0);
+}
+
+.animate {
+  animation: ripple .50s linear;
+}

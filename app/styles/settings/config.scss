@@ -55,3 +55,13 @@ $use--ordering-helpers:               'true';
 // #FORMS
 //------------------------------------------------------------------------------
 $global--border-animation:            2px;
+
+
+//------------------------------------------------------------------------------
+// #BUTTONS-CONFIG
+// Set up which styles of buttons are needed.
+//------------------------------------------------------------------------------
+$global--buttons-flat:                'true';
+$global--buttons-raised:              'true';
+$global--buttons-link:                'true';
+$global--buttons-icon:                'true';

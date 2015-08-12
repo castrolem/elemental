@@ -583,14 +583,96 @@
                   buttons
                 </h2>
                 <div class="pattern--block__body">
+                  <h4>Flat</h4>
                   <p>
-                    <a href="#" class="button">Default</a>
-                    <a href="#" class="button alt">Alt</a>
+                    <button class="button">
+                      <span>Default</span>
+                    </button>
+                    <button class="button primary">
+                      <span>Primary</span>
+                    </button>
+                    <button class="button disabled" aria-disabled="true" disabled="disabled">
+                      <span>Disabled Button</span>
+                    </button>
+                    <button class="button error">
+                      <span>Error Button</span>
+                    </button>
+                    <button class="button valid">
+                      <span>Success Button</span>
+                    </button>
                   </p>
+                  <h4>Raised</h4>
                   <p>
-                    <a href="#" class="button disabled">Disabled Button</a>
-                    <a href="#" class="button error">Error Button</a>
-                    <a href="#" class="button success">Success Button</a>
+                    <button class="button raised">
+                      <span>Default</span>
+                    </button>
+                    <button class="button raised primary">
+                      <span>Primary</span>
+                    </button>
+                    <button class="button raised disabled" aria-disabled="true" disabled="disabled">
+                      <span>Disabled Button</span>
+                    </button>
+                    <button class="button raised error">
+                      <span>Error Button</span>
+                    </button>
+                    <button class="button raised valid">
+                      <span>Success Button</span>
+                    </button>
+                  </p>
+                  <h4>Link</h4>
+                  <p>
+                    <a href="#" class="button">
+                      <span>Default</span>
+                    </a>
+                    <a href="#" class="button primary">
+                      <span>Primary</span>
+                    </a>
+                    <a href="#" class="button disabled" aria-disabled="true" disabled="disabled">
+                      <span>Disabled Button</span>
+                    </a>
+                    <a href="#" class="button error">
+                      <span>Error Button</span>
+                    </a>
+                    <a href="#" class="button valid">
+                      <span>Success Button</span>
+                    </a>
+                  </p>
+                  <h4>Icon</h4>
+                  <p>
+                    <button class="button icon">
+                      <span><i class="fa fa-calendar"></i></span>
+                    </button>
+                    <button class="button icon primary">
+                      <span><i class="fa fa-comments"></i></span>
+                    </button>
+                    <button class="button icon disabled" aria-disabled="true" disabled="disabled">
+                      <span><i class="fa fa-bars"></i></span>
+                    </button>
+                    <button class="button icon error">
+                      <span><i class="fa fa-tags"></i></span>
+                    </button>
+                    <button class="button icon valid">
+                      <span><i class="fa fa-bold"></i></span>
+                    </button>
+                  </p>
+
+                  <h4>Combinations</h4>
+                  <p>
+                    <button class="button raised icon">
+                      <span><i class="fa fa-calendar"></i></span>
+                    </button>
+                    <button class="button raised icon primary">
+                      <span><i class="fa fa-comments"></i></span>
+                    </button>
+                    <button class="button raised icon disabled" aria-disabled="true" disabled="disabled">
+                      <span><i class="fa fa-bars"></i></span>
+                    </button>
+                    <button class="button raised icon error">
+                      <span><i class="fa fa-tags"></i></span>
+                    </button>
+                    <button class="button raised icon valid">
+                      <span><i class="fa fa-bold"></i></span>
+                    </button>
                   </p>
                 </div>
               </div>
@@ -694,16 +776,6 @@
       </div>
     </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -711,6 +783,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/buttons.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
