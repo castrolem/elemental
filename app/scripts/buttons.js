@@ -1,14 +1,43 @@
-var buttonSettings,
+//------------------------------------------------------------------------------
+// #DISABLED-LINK-BEHAVIOUR
+//------------------------------------------------------------------------------
+var disabledLinksSettings, disabledLinksBehaviour;
+
+disabledLinksBehaviour = {
+  settings: {
+    class: 'a[disabled]'
+  },
+
+  init: function init() {
+    disabledLinksSettings = this.settings;
+    this.correctDisabledEvent();
+  },
+
+  correctDisabledEvent: function correctDisabledEvent() {
+    $('body').on('click', disabledLinksSettings.class, function(e) {
+      e.preventDefault();
+
+      return false;
+    });
+  }
+};
+
+
+//------------------------------------------------------------------------------
+// #BUTTON-ANIMATION
+//------------------------------------------------------------------------------
+var buttonSettings, buttonAnimation;
+
 buttonAnimation = {
 
   settings: {
     class: 'animate',
     triggerWith: 'ink',
-    element: '.button',
+    element: '.button:not([disabled])',
     event: 'click'
   },
 
-  init: function() {
+  init: function init() {
     buttonSettings = this.settings;
     this.animateButtons();
   },
