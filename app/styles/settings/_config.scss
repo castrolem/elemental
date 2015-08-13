@@ -65,3 +65,11 @@ $global--buttons-flat:                'true';
 $global--buttons-raised:              'true';
 $global--buttons-link:                'true';
 $global--buttons-icon:                'true';
+
+
+//------------------------------------------------------------------------------
+// #CARDS-CONFIG
+// Set up how depth you want the card levels to go
+//------------------------------------------------------------------------------
+$global--card-depth:                  8;
+$global--card-border:                 2px;

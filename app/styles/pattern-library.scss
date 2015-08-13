@@ -8,6 +8,10 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 //------------------------------------------------------------------------------
 // #GRID
 //------------------------------------------------------------------------------
+.pattern--body {
+  background-color: #F9F9F9;
+}
+
 .pattern--grid-system__row {
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -148,6 +152,14 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 // #PATTERN--BLOCKS
 //------------------------------------------------------------------------------
 
+.pattern--distribute__items {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .pattern--item {
 
 
@@ -286,4 +298,12 @@ pre.language-markup {
 .pattern--fieldset {
   float: left;
   margin-right: 2rem;
+}
+
+
+//------------------------------------------------------------------------------
+// #PATTERN--CARDS
+//------------------------------------------------------------------------------
+.patter--card {
+  margin: 1rem;
 }

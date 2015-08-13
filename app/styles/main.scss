@@ -28,12 +28,14 @@
 @import 'settings/sizes.scss';
 @import 'settings/colours.scss';
 @import 'settings/config.scss';
+@import 'settings/index.scss';
 
 //------------------------------------------------------------------------------
 // #LAYOUTS
 //------------------------------------------------------------------------------
 @import 'layouts/body.scss';
 @import 'layouts/grid.scss';
+@import 'layouts/cards.scss';
 
 //------------------------------------------------------------------------------
 // #OBJECTS

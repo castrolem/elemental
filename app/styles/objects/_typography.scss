@@ -79,7 +79,7 @@ blockquote, .blockquote {
   @include font--secondary($weight: 300);
   color: $global--font-color;
   cursor: default;
-  margin: $space-half auto;
+  margin: $space-half 0;
 }
 
 h1, .h1 {
