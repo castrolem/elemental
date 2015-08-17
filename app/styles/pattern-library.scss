@@ -182,6 +182,10 @@ $better-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light",
 
   > .pattern--block__body {
     padding: .5rem;
+
+    > img {
+      margin: .5rem;
+    }
   }
 }
 
