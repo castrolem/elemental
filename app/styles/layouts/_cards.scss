@@ -17,11 +17,14 @@ $card-border:                   $global--card-border;
   min-height: 200px;
   overflow: hidden;
   position: relative;
-  width: 330px;
   z-index: z($index-list, 'cards');
 
   > .card {
     padding: $pad;
+  }
+
+  @media (min-width: $venti) {
+    width: 330px;
   }
 }
 

@@ -1,0 +1,124 @@
+//------------------------------------------------------------------------------
+// #TABS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// #GENERAL
+//------------------------------------------------------------------------------
+
+.tabs {
+	margin: $pad 0 $pad-double;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+  nav {
+    text-align: center;
+
+    a {
+      @extend .button;
+      display: block;
+      color: $mist;
+      margin: 0;
+      min-width: 0;
+    }
+
+    ul {
+      @include list-reset();
+    	display: inline-block;
+    }
+
+    li {
+    	border-bottom: none;
+    	display: block;
+    	float: left;
+    	margin: 0 $space-quarter;
+    	position: relative;
+      border: 1px solid $mist;
+
+      &.active {
+        border-bottom: none;
+        border: 1px solid $base;
+        box-shadow: inset 0 2px $base;
+        z-index: 100;
+
+        &::before,
+        &::after {
+        	background: $base;
+        	bottom: -1px;
+        	height: 1px;
+        	position: absolute;
+        	right: 100%;
+        	width: 1000px;
+          content: '';
+        }
+
+        &::after {
+        	right: auto;
+        	left: 100%;
+        	width: 4000px;
+        }
+
+        a {
+          color: $base;
+        }
+      }
+    }
+
+    @media screen and (max-width: $grande) {
+    	a span {
+    		display: none;
+    	}
+
+    	a:before {
+    		margin-right: 0;
+    	}
+    }
+
+    @media screen and (max-width: $tall) {
+    	ul,
+    	a {
+    		width: 100%;
+    		padding: 0;
+    	}
+
+    	li {
+    		width: 20%;
+    		width: calc(20% + 1px);
+    		margin: 0 0 0 -1px;
+    	}
+
+    	ul li:last-child {
+    		border-right: none;
+    	}
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #CONTENT
+//------------------------------------------------------------------------------
+
+.tabs .content {
+  margin-top: -3px; //TODO: Find why this needs a Magic Number for top margin
+  padding: $pad-double;
+
+  section {
+    @include clearfix();
+    display: none;
+    margin: 0 auto;
+    max-width: $global--max-width-of-grid;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .card {
+    width: 100%;
+  }
+}
