@@ -29,8 +29,8 @@
     opacity: 0;
     visibility: hidden;
   } @else {
-    max-height: auto;
-    max-width: auto;
+    max-height: $global--indent;
+    max-width: $global--indent;
     opacity: 1;
     visibility: visible;
   }

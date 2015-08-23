@@ -1,3 +1,5 @@
+'use strict';
+
 //------------------------------------------------------------------------------
 // #DISABLED-LINK-BEHAVIOUR
 //------------------------------------------------------------------------------
@@ -42,7 +44,7 @@ buttonAnimation = {
     this.animateButtons();
   },
 
-  animateButtons: function buttonAnimation() {
+  animateButtons: function animateButtons() {
     var ink, sizing, x, y;
 
     // for input buttons
@@ -69,6 +71,6 @@ buttonAnimation = {
         top: y + 'px',
         left: x + 'px'
       }).addClass(buttonSettings.class);
-    })
+    });
   }
 };

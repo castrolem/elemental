@@ -27,7 +27,7 @@ fieldset {
 input,
 textarea,
 select {
-  @include font--primary();
+  @include font--primary($line: 39px);
   @include single-transition();
   background-color: white;
   background-image: none;
@@ -36,7 +36,7 @@ select {
   color: $global--font-color;
   display: inline-block;
   outline: 0;
-  padding: $pad-half $pad;
+  padding: 0 $pad;
 
   .field--container & {
     display: block;
@@ -139,6 +139,7 @@ legend {
 
       padding-left: $size + 7px;
       position: relative;
+      user-select: none;
 
       &::before {
         @include single-transition();

@@ -27,23 +27,25 @@
     }
 
     ul {
+			@extend .row;
       @include list-reset();
-    	display: inline-block;
     }
 
     li {
-    	border-bottom: none;
-    	display: block;
-    	float: left;
-    	margin: 0 $space-quarter;
+			@extend [class^='column-'];
+			@include single-transition();
+
+			border: 1px solid $mist;
+			border-right: 0;
+			justify-content: space-around;
+    	border-bottom: 1px solid transparent;
+    	margin: 0;
     	position: relative;
-      border: 1px solid $mist;
 
       &.active {
-        border-bottom: none;
-        border: 1px solid $base;
-        box-shadow: inset 0 2px $base;
-        z-index: 100;
+				background-color: $base;
+        border-bottom: 1px solid $base;
+        z-index: z($index-list, 'active-tab');
 
         &::before,
         &::after {
@@ -63,9 +65,13 @@
         }
 
         a {
-          color: $base;
+          color: $white;
         }
       }
+
+			&:last-child {
+				border-right: 1px solid $mist;
+			}
     }
 
     @media screen and (max-width: $grande) {

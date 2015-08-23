@@ -1,0 +1,131 @@
+//------------------------------------------------------------------------------
+// #NAVBARS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+$navbar--background-colour: darken($base, 10%);
+
+//------------------------------------------------------------------------------
+// #GENERAL
+//------------------------------------------------------------------------------
+.navbar {
+  @extend .card-depth-1;
+  @include clearfix();;
+  background-color: $navbar--background-colour;
+  color: $white;
+  width: 100%;
+  display: block;
+}
+
+.navbar-desktop,
+.navbar-form {
+  @media (min-width: $grande) {
+    float: left;
+  }
+}
+
+.navbar-desktop {
+  @include list-reset();
+  @include clearfix();
+
+  > li {
+    float: left;
+    min-height: 40px;
+  }
+
+  .active {
+    background-color: darken($navbar--background-colour, 10%);
+  }
+}
+
+.navbar .button,
+.navbar-link {
+  margin: 0;
+  text-transform: none;
+}
+
+.navbar-link {
+  @extend .button;
+  display: block;
+}
+
+.navbar-form {
+
+  .field--container {
+    max-width: 150px;
+    display: inline-block;
+  }
+
+  .field--container label ~ input,
+  .field--container label ~ input:focus,
+  .field--container label ~ input:active {
+    border-bottom-width: 1px;
+  }
+}
+
+.navbar-dropdown-menu {
+  @extend .card-depth-1;
+  @extend .card;
+  @include list-reset();
+  opacity: 0;
+  background-color: $navbar--background-colour;
+  min-height: 0;
+  padding: $pad-half;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+  z-index: z($index-list, 'navbar-dropdown-menu');
+  transition: transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+  transform-origin: 0 0;
+  transform: scale(0);
+  min-width: round($short / 1.5);
+
+  .navbar-link {
+    font-size: 100%;
+    text-align: left;
+  }
+
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: inherit;
+  }
+}
+
+.navbar-right {
+  float: right;
+}
+
+
+//------------------------------------------------------------------------------
+// #NAVBAR-HEADER
+//------------------------------------------------------------------------------
+.navbar-mobile-header {
+  @media (min-width: $grande) {
+    @include clearfix();
+    float: left;
+  }
+
+  .site-brand {
+    display: block;
+    margin-right: $space-quarter;
+    max-height: 40px;
+    max-width: 60px;
+    position: relative;
+
+    span {
+      display: block;
+      text-indent: -$global--indent;
+    }
+  }
+}
+
+
+//------------------------------------------------------------------------------
+// #NAVBAR-HORIZONTAL
+//------------------------------------------------------------------------------
+.navbar.navbar-horizontal {
+
+}

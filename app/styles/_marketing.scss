@@ -1,0 +1,22 @@
+//------------------------------------------------------------------------------
+// #PATTERN--DOCUMENTATION-HEADER
+//------------------------------------------------------------------------------
+.marketing--documentation-header {
+  background-color: darken(#378BEB, 5%);
+  padding: $pad*4 0;
+  margin-bottom: $space-double;
+
+  h2,
+  p,
+  small {
+    color: white;
+  }
+
+  small {
+    @include font--primary($size: 11px);
+    display: block;
+    margin: $space-and-half 0 0;
+    opacity: .7;
+    text-align: center;
+  }
+}

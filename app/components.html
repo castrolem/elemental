@@ -1,0 +1,382 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elements Framework</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body class="pattern--body">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-horizontal">
+      <!-- put your brand in here -->
+      <header class="navbar-mobile-header">
+        <a class="site-brand" href="/">
+          <img class="image-responsive" src="http://placehold.it/120x80" alt="Elemental CSS Framework" />
+          <span>Elemental CSS Framework</span>
+        </a>
+      </header>
+
+      <ul class="navbar-desktop">
+        <li>
+          <a class='navbar-link' href="#">Home</a>
+        </li>
+        <li class="navbar-dropdown">
+          <a class='navbar-link navbar-dropdown-toggle' href="#"
+             role="button" aria-haspopup="true" aria-expanded="false">
+             Styles <i class="fa fa-caret-down"></i>
+          </a>
+
+          <ul class="navbar-dropdown-menu">
+            <li><a class='navbar-link' href="#">Grids</a></li>
+            <li><a class='navbar-link' href="#">Colours</a></li>
+            <li><a class='navbar-link' href="#">Typography</a></li>
+            <li><a class='navbar-link' href="#">Headings</a></li>
+            <li><a class='navbar-link' href="#">Tables</a></li>
+            <li><a class='navbar-link' href="#">Forms</a></li>
+            <li><a class='navbar-link' href="#">Buttons</a></li>
+            <li><a class='navbar-link' href="#">Buttons</a></li>
+            <li><a class='navbar-link' href="#">Images</a></li>
+          </ul>
+        </li>
+        <li class="navbar-dropdown active">
+          <a class='navbar-link navbar-dropdown-toggle' href="#"
+             role="button" aria-haspopup="true" aria-expanded="false">
+             Components <i class="fa fa-caret-down"></i>
+          </a>
+
+          <ul class="navbar-dropdown-menu">
+            <li><a class='navbar-link' href="#">Navbars</a></li>
+            <li><a class='navbar-link' href="#">Tabs</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="navbar-desktop navbar-right">
+        <li>
+          <a class='navbar-link' href="#">Download</a>
+        </li>
+      </ul>
+    </nav><!-- main navigation -->
+
+    <section class="pattern--documentation-header">
+      <div class="wrapper">
+        <div class="row">
+          <div class="column-4-6">
+            <h2>CSS Overview</h2>
+            <p>
+              HTML Elements styled and extensible classes to use, like an
+              incredible flexbox grid system, custom typography elements and
+              great looking forms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="row">
+        <div class="column-4-6">
+          <main class="pattern--main">
+            <div id="view--horizontal-nav" class="pattern--style-guide__block">
+              <h2>Horizontal navigation</h2>
+
+              <p>
+                Navbars are components that serve as navigation
+                headers for your application or site. They are responsive
+                starting with a breadcrumb style and you can change the type of
+                animation by adding different classes.
+              </p>
+
+              <nav class="navbar navbar-horizontal">
+                <!-- put your brand in here -->
+                <header class="navbar-mobile-header">
+                  <a class="site-brand" href="#">
+                    <img class="image-responsive" src="http://placehold.it/120x80" alt="Site Brand" />
+                    <span>Site Brand Name Inc.</span>
+                  </a>
+                </header>
+
+                <ul class="navbar-desktop">
+                  <li class="active">
+                    <a class='navbar-link' href="#">Link</a>
+                  </li>
+                  <li>
+                    <a class='navbar-link' href="#">Link</a>
+                  </li>
+                  <li class="navbar-dropdown">
+                    <a class='navbar-link navbar-dropdown-toggle' href="#"
+                       role="button" aria-haspopup="true" aria-expanded="false">
+                       Link <i class="fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="navbar-dropdown-menu">
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <form class="navbar-form" role="search">
+                  <div class="field--container">
+                    <label for="search"></label>
+                    <input id="search" type="search" placeholder="Search...">
+                  </div>
+                  <button type="submit" class="button">Search</button>
+                </form>
+
+                <ul class="navbar-desktop navbar-right">
+                  <li>
+                    <a class='navbar-link' href="#">Link</a>
+                  </li>
+                  <li class="navbar-dropdown">
+                    <a class='navbar-link navbar-dropdown-toggle' href="#"
+                       role="button" aria-haspopup="true" aria-expanded="false">
+                       Link <i class="fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="navbar-dropdown-menu">
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                      <li><a class='navbar-link' href="#">Link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+            </div><!-- end of style-guide block -->
+
+            <div class="pattern--style-guide__block">
+              <div id="view--responsive-tabs" class="pattern--item">
+                <h2 class="pattern--block__title">
+                  Tabs
+                </h2>
+                <div class="pattern--block__body">
+                  <div class="tabs">
+                  	<nav>
+                  		<ul>
+                  			<li class="active"><a href="#tab-1"><span>Dashboard</span> <i class="fa fa-pie-chart"></i></a></li>
+                  			<li><a href="#tab-2"><span>Coffee</span> <i class="fa fa-coffee"></i></a></li>
+                  			<li><a href="#tab-3"><span>Cars</span> <i class="fa fa-car"></i></a></li>
+                  			<li><a href="#tab-4"><span>Lab</span> <i class="fa fa-flask"></i></a></li>
+                  			<li><a href="#tab-5"><span>Money</span> <i class="fa fa-bitcoin"></i></a></li>
+                  		</ul>
+                  	</nav>
+                  	<div class="content">
+                  		<section id="tab-1" class="active">
+                        <div class="row">
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for first tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for first tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for first tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                        </div>
+                  		</section>
+                      <section id="tab-2">
+                        <div class="row">
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for second tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for second tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for second tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                        </div>
+                  		</section>
+                      <section id="tab-3">
+                        <div class="row">
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for third tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for third tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for third tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                        </div>
+                  		</section>
+                      <section id="tab-4">
+                        <div class="row">
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for fourth tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for fourth tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for fourth tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                        </div>
+                  		</section>
+                      <section id="tab-5">
+                        <div class="row">
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for fifth tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for fifth tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                          <div class="column-1-3 column-mobile-1-1">
+                            <div class="card">
+                      				<img src="http://placehold.it/450x300" alt="Beyoncé" class="image-responsive" />
+                              <div class="card">
+                                <h3>Title for fifth tab</h3>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                              </div>
+                      			</div>
+                          </div>
+                        </div>
+                  		</section>
+
+                  	</div><!-- /content -->
+                  </div><!-- /tabs -->
+                </div>
+              </div>
+            </div><!-- end of style-guide block -->
+          </main>
+        </div>
+
+        <div class="column-2-6">
+          <nav class="pattern--nav">
+            <ul class="no-style">
+              <li>
+                <a href="#view--horizontal-nav">Horizontal Navigation</a>
+              </li>
+              <li>
+                <a href="#view--responsive-tabs">Tabbed Navigation</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/buttons.js"></script>
+    <script src="scripts/dropdowns.js"></script>
+    <script src="scripts/navbars.js"></script>
+    <script src="scripts/tabs.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

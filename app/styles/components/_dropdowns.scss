@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------------
+// #DROPDOWNS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+$dropdowns--background-colour: white;
+
+//------------------------------------------------------------------------------
+// #GENERAL
+//------------------------------------------------------------------------------
+.dropdown-toggle {
+  @extend .button;
+}
+
+.dropdown {
+  @extend .card-depth-1;
+  @extend .card;
+  @include invisible();
+  @include list-reset();
+  pointer-events: none;
+  padding: $pad-half;
+  overflow: hidden;
+
+  &.active {
+    @include invisible($state: false);
+    min-width: round($short / 1.5);
+    pointer-events: inherit;
+  }
+}
