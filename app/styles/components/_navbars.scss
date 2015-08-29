@@ -67,20 +67,17 @@ $navbar--background-colour: darken($base, 10%);
   @extend .card-depth-1;
   @extend .card;
   @include list-reset();
-  opacity: 0;
   background-color: $navbar--background-colour;
   min-height: 0;
+  min-width: round($short / 1.5);
+  overflow: hidden;
   padding: $pad-half;
   pointer-events: none;
   position: absolute;
-  overflow: hidden;
-  width: auto;
-  z-index: z($index-list, 'navbar-dropdown-menu');
-  transition: transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1);
-  will-change: transform;
-  transform-origin: 0 0;
   transform: scale(0);
-  min-width: round($short / 1.5);
+  width: auto;
+  will-change: transform;
+  z-index: z($index-list, 'navbar-dropdown-menu');
 
   .navbar-link {
     font-size: 100%;
@@ -88,9 +85,8 @@ $navbar--background-colour: darken($base, 10%);
   }
 
   &.active {
-    transform: scale(1);
-    opacity: 1;
     pointer-events: inherit;
+    transform: scale(1);
   }
 }
 
@@ -128,4 +124,19 @@ $navbar--background-colour: darken($base, 10%);
 //------------------------------------------------------------------------------
 .navbar.navbar-horizontal {
 
+}
+
+
+//------------------------------------------------------------------------------
+// #ANIMATIONS
+//------------------------------------------------------------------------------
+
+.navbar-dropdown-menu.with__animations {
+  opacity: 0;
+  transform-origin: 0 0;
+  transition: transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1);
+
+  .active {
+    opacity: 1;
+  }
 }

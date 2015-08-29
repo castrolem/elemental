@@ -8,8 +8,10 @@ $blue-da-france:              #378BEB;
 $blue-da-france-dark:         darken(#378BEB, 5%);
 $lima:                        #7DD800;
 $lima-dark:                   darken(#7DD800, 5%);
+$banana:                      #F6C141;
+$banana-dark:                 darken(#F6C141, 5%);
 // body {
-//   background-color: $lima-dark !important;
+//   background-color: $banana-dark !important;
 // }
 
 //------------------------------------------------------------------------------
@@ -42,6 +44,5 @@ $coat:              $black-flag;
 //------------------------------------------------------------------------------
 
 $valid:             $lima;
-// $warning--colour:   $banana;
+$warning:           $banana;
 $error:             $strawberry;
-// $disabled--colour:  $coral;

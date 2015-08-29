@@ -24,7 +24,7 @@ $card-border:                   $global--card-border;
   }
 
   @media (min-width: $venti) {
-    width: 330px;
+    min-width: 330px;
   }
 }
 

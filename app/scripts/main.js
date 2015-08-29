@@ -9,4 +9,6 @@ $( document ).ready(function() {
   tabsBehaviour.init(); // enable responsive tabs
   dropdownsBehaviour.init(); // enable dropdowns
   navbars.init(); // enable navbar functionality
+
+  styleGuide.init(); // enable style-guide animations
 });
