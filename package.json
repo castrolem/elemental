@@ -35,7 +35,12 @@
       "quotes": [
         2,
         "single"
-      ]
+      ],
+      "camelcase": 1
+    },
+    "globals":{
+        "jQuery": false,
+        "$": true
     }
   }
 }
