@@ -3,7 +3,9 @@
 //------------------------------------------------------------------------------
 // #VARIABLES
 //------------------------------------------------------------------------------
-$navbar--background-colour: darken($base, 10%);
+$navbar--background-colour:           darken($base, 10%);
+$navbar--active-links-colour:         darken($navbar--background-colour, 10%);
+$navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
 //------------------------------------------------------------------------------
 // #GENERAL
@@ -17,26 +19,61 @@ $navbar--background-colour: darken($base, 10%);
   display: block;
 }
 
-.navbar-desktop,
+.navbar-nav,
 .navbar-form {
   @media (min-width: $grande) {
     float: left;
   }
 }
 
-.navbar-desktop {
+.navbar-nav {
   @include list-reset();
   @include clearfix();
 
   > li {
-    float: left;
-    min-height: 40px;
+    @media (min-width: $grande) {
+      float: left;
+      min-height: 40px;
+    }
   }
 
   .active {
-    background-color: darken($navbar--background-colour, 10%);
+    background-color: $navbar--active-links-colour;
   }
 }
+
+//------------------------------------------------------------------------------
+// #NAVBAR-BEHAVIOUR
+//------------------------------------------------------------------------------
+
+.navbar .will-collapse {
+  display: none;
+  overflow: hidden;
+  pointer-events: inherit;
+  will-change: transform;
+
+  .navbar-nav > li > .navbar-link:not(.active) {
+    background-color: $navbar--will-collapse-colour;
+  }
+
+  &.active {
+    max-height: $global--max-height;
+  }
+
+  @media (min-width: $grande) {
+
+    &,
+    &.active {
+      display: block !important;
+      max-height: none;
+      overflow: inherit;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// #NAVBAR-ELEMENTS
+//------------------------------------------------------------------------------
 
 .navbar .button,
 .navbar-link {
@@ -45,7 +82,40 @@ $navbar--background-colour: darken($base, 10%);
 }
 
 .navbar-link {
+
+  &:not(.toggle-navbar) {
+    text-align: left;
+  }
+
+  > .fa.fa-caret-down {
+    @include single-transition($property: transform);
+    float: right;
+    line-height: 39px;
+    transform-origin: center;
+  }
+
+  &.active {
+    > .fa.fa-caret-down {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (min-width: $grande) {
+    &:not(.toggle-navbar) {
+      text-align: center;
+    }
+
+    > .fa.fa-caret-down {
+      float: none;
+      line-height: 39px;
+      padding: 0 $pad-quarter;
+    }
+  }
+}
+
+.navbar-link {
   @extend .button;
+  @include clearfix();
   display: block;
 }
 
@@ -63,18 +133,20 @@ $navbar--background-colour: darken($base, 10%);
   }
 }
 
+//------------------------------------------------------------------------------
+// #NAVBAR-DROPDOWNS
+//------------------------------------------------------------------------------
+
 .navbar-dropdown-menu {
   @extend .card-depth-1;
   @extend .card;
   @include list-reset();
   background-color: $navbar--background-colour;
+  display: none;
   min-height: 0;
   min-width: round($short / 1.5);
   overflow: hidden;
-  padding: $pad-half;
-  pointer-events: none;
-  position: absolute;
-  transform: scale(0);
+  padding: 0;
   width: auto;
   will-change: transform;
   z-index: z($index-list, 'navbar-dropdown-menu');
@@ -85,13 +157,33 @@ $navbar--background-colour: darken($base, 10%);
   }
 
   &.active {
-    pointer-events: inherit;
-    transform: scale(1);
+    max-height: $global--max-height;
+  }
+
+  @media (min-width: $grande) {
+    display: block !important;
+    max-height: none;
+    padding: $pad-half;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: top left;
+    transform: scale(0, 0);
+
+    &.active {
+      pointer-events: inherit;
+      transform: scale(1, 1);
+    }
   }
 }
 
+//------------------------------------------------------------------------------
+// #NAVBAR-POSITION
+//------------------------------------------------------------------------------
+
 .navbar-right {
-  float: right;
+  @media (min-width: $grande) {
+    float: right;
+  }
 }
 
 
@@ -99,17 +191,31 @@ $navbar--background-colour: darken($base, 10%);
 // #NAVBAR-HEADER
 //------------------------------------------------------------------------------
 .navbar-mobile-header {
+  @include clearfix();
+
   @media (min-width: $grande) {
-    @include clearfix();
     float: left;
   }
 
+  .toggle-navbar {
+    float: right;
+
+    @media (min-width: $grande) {
+      display: none;
+    }
+  }
+
   .site-brand {
+    float: left;
     display: block;
     margin-right: $space-quarter;
     max-height: 40px;
     max-width: 60px;
     position: relative;
+
+    @media (min-width: $grande) {
+      float: none;
+    }
 
     span {
       display: block;
@@ -132,11 +238,14 @@ $navbar--background-colour: darken($base, 10%);
 //------------------------------------------------------------------------------
 
 .navbar-dropdown-menu.with__animations {
-  opacity: 0;
-  transform-origin: 0 0;
-  transition: transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1);
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
 
-  .active {
+  @media (min-width: $grande) {
+    opacity: 0;
+    transform-origin: 0 0;
+  }
+
+  &.active {
     opacity: 1;
   }
 }
