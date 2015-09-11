@@ -85,12 +85,13 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
   &:not(.toggle-navbar) {
     text-align: left;
+    min-height: 40px;
   }
 
   > .fa.fa-caret-down {
     @include single-transition($property: transform);
     float: right;
-    line-height: 39px;
+    line-height: 40px;
     transform-origin: center;
   }
 
@@ -107,7 +108,7 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
     > .fa.fa-caret-down {
       float: none;
-      line-height: 39px;
+      line-height: 40px;
       padding: 0 $pad-quarter;
     }
   }
@@ -147,6 +148,7 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
   min-width: round($short / 1.5);
   overflow: hidden;
   padding: 0;
+  transform: translate3d(0,0,0);
   width: auto;
   will-change: transform;
   z-index: z($index-list, 'navbar-dropdown-menu');
@@ -167,11 +169,11 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
     pointer-events: none;
     position: absolute;
     transform-origin: top left;
-    transform: scale(0, 0);
+    transform: scale(0, 0) translate3d(0,0,0);
 
     &.active {
       pointer-events: inherit;
-      transform: scale(1, 1);
+      transform: scale(1, 1) translate3d(0,0,0);
     }
   }
 }
@@ -184,6 +186,11 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
   @media (min-width: $grande) {
     float: right;
   }
+}
+
+.navbar.navbar-fixed {
+  position: fixed;
+  z-index: z($index-list, 'navbar-fixed');
 }
 
 
