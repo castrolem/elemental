@@ -10,7 +10,8 @@ navbars = {
     class: 'navbar',
     dropdownClass: '.navbar-dropdown-menu',
     toggleButton: '.toggle-navbar',
-    toggledClass: '.will-collapse'
+    toggledClass: '.will-collapse',
+    mobileWidth: 750
   },
 
   init: function init() {
@@ -29,7 +30,7 @@ navbars = {
     $('body').on('click', dropdownTriggerWith, function(e) {
       e.preventDefault();
       dropdownBox = $(this).next();
-      if ($(window).width() <= 750) {
+      if (navbars.checkCurrentNavWindowSize()) {
         dropdownBox.slideToggle();
       } else {
         dropdownBox.toggleClass('active');
@@ -61,7 +62,7 @@ navbars = {
     $('body').on('click', function() {
       $(navbarSettings.dropdownClass).removeClass('active');
 
-      if ($(window).width() <= 750) {
+      if (navbars.checkCurrentNavWindowSize()) {
         $(navbarSettings.toggledClass).slideUp();
       }
     });
@@ -73,5 +74,9 @@ navbars = {
 
       $(navbarSettings.toggledClass).slideToggle();
     });
+  },
+
+  checkCurrentNavWindowSize: function checkCurrentNavWindowSize() {
+    return $(window).width() <= navbarSettings.mobileWidth ? true : false;
   }
 };
