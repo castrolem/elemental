@@ -43,13 +43,11 @@
 $calc--with: 100%;
 
 @for $i from 1 through $global--amount-of-columns-desktop {
-  @for $j from 1 through $global--amount-of-columns-desktop {
-    .column-#{$i}-#{$j} {
-      $width: ($calc--with / $j) * $i;
+  .column-#{$i}-#{$global--amount-of-columns-desktop} {
+    $width: ($calc--with / $global--amount-of-columns-desktop) * $i;
 
-      flex-basis: $width;
-      max-width: $width;
-    }
+    flex-basis: $width;
+    max-width: $width;
   }
 }
 
@@ -59,13 +57,11 @@ $calc--with: 100%;
 //------------------------------------------------------------------------------
 @media (max-width: $venti) {
   @for $i from 1 through $global--amount-of-columns-tablet {
-    @for $j from 1 through $global--amount-of-columns-tablet {
-      .column-tablet-#{$i}-#{$j} {
-        $width: ($calc--with / $j) * $i;
+    .column-tablet-#{$i}-#{$global--amount-of-columns-tablet} {
+      $width: ($calc--with / $global--amount-of-columns-tablet) * $i;
 
-        flex-basis: $width;
-        max-width: $width;
-      }
+      flex-basis: $width;
+      max-width: $width;
     }
   }
 }
@@ -74,15 +70,13 @@ $calc--with: 100%;
 //------------------------------------------------------------------------------
 // #MOBILE-COLUMNS
 //------------------------------------------------------------------------------
-@media (max-width: $venti) {
+@media (max-width: $tall) {
   @for $i from 1 through $global--amount-of-columns-mobile {
-    @for $j from 1 through $global--amount-of-columns-mobile {
-      .column-mobile-#{$i}-#{$j} {
-        $width: ($calc--with / $j) * $i;
+    .column-mobile-#{$i}-#{$global--amount-of-columns-mobile} {
+      $width: ($calc--with / $global--amount-of-columns-mobile) * $i;
 
-        flex-basis: $width;
-        max-width: $width;
-      }
+      flex-basis: $width;
+      max-width: $width;
     }
   }
 }
