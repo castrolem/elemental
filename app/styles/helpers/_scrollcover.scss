@@ -1,0 +1,15 @@
+//------------------------------------------------------------------------------
+// #SCROLL-COVER
+// This element is appended to the body when user is scrolling to avoid
+// hover effects and repainting of the browser
+//------------------------------------------------------------------------------
+
+.scroll-cover {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  pointer-events: auto !important;
+  z-index: 10000;
+}
