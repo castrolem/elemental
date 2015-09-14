@@ -35,9 +35,13 @@
           <img class="image-responsive" src="http://placehold.it/120x80" alt="Elemental CSS Framework" />
           <span>Elemental CSS Framework</span>
         </a>
+
+        <div class="button icon toggle-navbar" data-target="#main-site-navbar">
+          <i class="fa fa-bars"></i>
+        </div>
       </header>
 
-      <div class="will-collapse">
+      <div class="will-collapse" id="main-site-navbar">
         <ul class="navbar-nav">
           <li>
             <a class='navbar-link' href="/">Home</a>
@@ -50,14 +54,16 @@
 
             <ul class="navbar-dropdown-menu">
               <li><a class='navbar-link' href="/styles.html#view--grid-system">Grids</a></li>
-              <li><a class='navbar-link' href="#">Colours</a></li>
-              <li><a class='navbar-link' href="#">Typography</a></li>
-              <li><a class='navbar-link' href="#">Headings</a></li>
-              <li><a class='navbar-link' href="#">Tables</a></li>
-              <li><a class='navbar-link' href="#">Forms</a></li>
-              <li><a class='navbar-link' href="#">Buttons</a></li>
-              <li><a class='navbar-link' href="#">Buttons</a></li>
-              <li><a class='navbar-link' href="#">Images</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--colours">Colours</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--fonts">Typography</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--headings">Headings</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--paragraphs">Paragraphs</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--blockquotes">Blockquotes</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--tables">Tables</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--text-fields">Forms</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--buttons">Buttons</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--cards">Cards</a></li>
+              <li><a class='navbar-link' href="/styles.html#view--images">Images</a></li>
             </ul>
           </li>
           <li class="navbar-dropdown">
@@ -68,7 +74,8 @@
 
             <ul class="navbar-dropdown-menu">
               <li><a class='navbar-link' href="/components.html#view--horizontal-nav">Navbars</a></li>
-              <li><a class='navbar-link' href="#">Tabs</a></li>
+              <li><a class='navbar-link' href="/components.html#view--responsive-tabs">Tabs</a></li>
+              <li><a class='navbar-link' href="/components.html#view--callouts-elements">Callouts</a></li>
             </ul>
           </li>
         </ul>
@@ -100,75 +107,83 @@
       <div class="row">
         <div class="column-4-6">
           <main class="pattern--main">
-            <div id="view--horizontal-nav" class="pattern--style-guide__block">
-              <h2>Horizontal navigation</h2>
+            <div class="pattern--style-guide__block">
+              <div id="view--horizontal-nav" class="pattern--style-guide__block">
+                <h2>Horizontal navigation</h2>
 
-              <p>
-                Navbars are components that serve as navigation
-                headers for your application or site. They are responsive
-                starting with a breadcrumb style and you can change the type of
-                animation by adding different classes.
-              </p>
+                <p>
+                  Navbars are components that serve as navigation
+                  headers for your application or site. They are responsive
+                  starting with a breadcrumb style and you can change the type of
+                  animation by adding different classes.
+                </p>
 
-              <nav class="navbar navbar-horizontal">
-                <!-- put your brand in here -->
-                <header class="navbar-mobile-header">
-                  <a class="site-brand" href="#">
-                    <img class="image-responsive" src="http://placehold.it/120x80" alt="Site Brand" />
-                    <span>Site Brand Name Inc.</span>
-                  </a>
-                </header>
-
-                <ul class="navbar-nav">
-                  <li>
-                    <a class='navbar-link' href="#">Link</a>
-                  </li>
-                  <li>
-                    <a class='navbar-link' href="#">Link</a>
-                  </li>
-                  <li class="navbar-dropdown">
-                    <a class='navbar-link navbar-dropdown-toggle' href="#"
-                       role="button" aria-haspopup="true" aria-expanded="false">
-                       Link <i class="fa fa-caret-down"></i>
+                <nav class="navbar navbar-horizontal">
+                  <!-- put your brand in here -->
+                  <header class="navbar-mobile-header">
+                    <a class="site-brand" href="#">
+                      <img class="image-responsive" src="http://placehold.it/120x80" alt="Site Brand" />
+                      <span>Site Brand Name Inc.</span>
                     </a>
 
-                    <ul class="navbar-dropdown-menu">
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                    <div class="button icon toggle-navbar" data-target="#navbar-example-1">
+                      <i class="fa fa-bars"></i>
+                    </div>
+                  </header>
 
-                <form class="navbar-form" role="search">
-                  <div class="field--container">
-                    <label for="search"></label>
-                    <input id="search" type="search" placeholder="Search...">
+                  <div class="will-collapse" id="navbar-example-1">
+                    <ul class="navbar-nav">
+                      <li>
+                        <a class='navbar-link' href="#">Link</a>
+                      </li>
+                      <li>
+                        <a class='navbar-link' href="#">Link</a>
+                      </li>
+                      <li class="navbar-dropdown">
+                        <a class='navbar-link navbar-dropdown-toggle' href="#"
+                           role="button" aria-haspopup="true" aria-expanded="false">
+                           Link <i class="fa fa-caret-down"></i>
+                        </a>
+
+                        <ul class="navbar-dropdown-menu">
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <form class="navbar-form" role="search">
+                      <div class="field--container">
+                        <label for="search"></label>
+                        <input id="search" type="search" placeholder="Search...">
+                      </div>
+                      <button type="submit" class="button">Search</button>
+                    </form>
+
+                    <ul class="navbar-nav navbar-right">
+                      <li>
+                        <a class='navbar-link' href="#">Link</a>
+                      </li>
+                      <li class="navbar-dropdown">
+                        <a class='navbar-link navbar-dropdown-toggle' href="#"
+                           role="button" aria-haspopup="true" aria-expanded="false">
+                           Link <i class="fa fa-caret-down"></i>
+                        </a>
+
+                        <ul class="navbar-dropdown-menu">
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                          <li><a class='navbar-link' href="#">Link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
-                  <button type="submit" class="button">Search</button>
-                </form>
+                </nav>
 
-                <ul class="navbar-nav navbar-right">
-                  <li>
-                    <a class='navbar-link' href="#">Link</a>
-                  </li>
-                  <li class="navbar-dropdown">
-                    <a class='navbar-link navbar-dropdown-toggle' href="#"
-                       role="button" aria-haspopup="true" aria-expanded="false">
-                       Link <i class="fa fa-caret-down"></i>
-                    </a>
-
-                    <ul class="navbar-dropdown-menu">
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                      <li><a class='navbar-link' href="#">Link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-
+              </div>
             </div><!-- end of style-guide block -->
 
             <div class="pattern--style-guide__block">
@@ -180,7 +195,7 @@
                   <div class="tabs">
                   	<nav>
                   		<ul>
-                  			<li><a href="#tab-1"><span>Dashboard</span> <i class="fa fa-pie-chart"></i></a></li>
+                  			<li class="active"><a href="#tab-1"><span>Dashboard</span> <i class="fa fa-pie-chart"></i></a></li>
                   			<li><a href="#tab-2"><span>Coffee</span> <i class="fa fa-coffee"></i></a></li>
                   			<li><a href="#tab-3"><span>Cars</span> <i class="fa fa-car"></i></a></li>
                   			<li><a href="#tab-4"><span>Lab</span> <i class="fa fa-flask"></i></a></li>
@@ -427,6 +442,9 @@
               </li>
               <li>
                 <a href="#view--responsive-tabs">Tabbed Navigation</a>
+              </li>
+              <li>
+                <a href="#view--callouts-elements">Callouts</a>
               </li>
             </ul>
           </nav>

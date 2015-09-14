@@ -9,6 +9,7 @@ navbars = {
   settings: {
     class: 'navbar',
     dropdownClass: '.navbar-dropdown-menu',
+    forms: '.navbar-form',
     toggleButton: '.toggle-navbar',
     toggledClass: '.will-collapse',
     mobileWidth: 750
@@ -18,6 +19,7 @@ navbars = {
     navbarSettings = this.settings;
     this.toggleActiveLinks();
     this.toggleDropdown();
+    this.toggleNavForms();
     this.toggleNavLinksOnBodyClick();
     this.toggleNavBarMobile();
   },
@@ -71,8 +73,18 @@ navbars = {
   toggleNavBarMobile: function toggleNavBarMobile() {
     $('body').on('click', navbarSettings.toggleButton, function(e) {
       e.stopPropagation();
+      if ($(this).data('target') && $($(this).data('target'))) {
+        var openSpecificNav = $($(this).data('target'));
+        $(openSpecificNav).slideToggle();
+      } else {
+        $(navbarSettings.toggledClass).slideToggle();
+      }
+    });
+  },
 
-      $(navbarSettings.toggledClass).slideToggle();
+  toggleNavForms: function toggleNavForms() {
+    $('body').on('click', navbarSettings.forms, function(e) {
+      e.stopPropagation();
     });
   },
 

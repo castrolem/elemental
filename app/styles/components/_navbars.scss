@@ -3,6 +3,7 @@
 //------------------------------------------------------------------------------
 // #VARIABLES
 //------------------------------------------------------------------------------
+$navbar--height:                      40px;
 $navbar--background-colour:           darken($base, 10%);
 $navbar--active-links-colour:         darken($navbar--background-colour, 10%);
 $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
@@ -33,7 +34,7 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
   > li {
     @media (min-width: $grande) {
       float: left;
-      min-height: 40px;
+      min-height: $navbar--height;
     }
   }
 
@@ -85,13 +86,13 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
   &:not(.toggle-navbar) {
     text-align: left;
-    min-height: 40px;
+    min-height: $navbar--height;
   }
 
   > .fa.fa-caret-down {
     @include single-transition($property: transform);
     float: right;
-    line-height: 40px;
+    line-height: $navbar--height;
     transform-origin: center;
   }
 
@@ -108,7 +109,7 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
     > .fa.fa-caret-down {
       float: none;
-      line-height: 40px;
+      line-height: $navbar--height;
       padding: 0 $pad-quarter;
     }
   }
@@ -121,10 +122,21 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 }
 
 .navbar-form {
+  display: flex;
 
   .field--container {
-    max-width: 150px;
-    display: inline-block;
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  @media (min-width: $grande) {
+    .field--container {
+      max-width: 150px;
+      display: inline-block;
+    }
   }
 
   .field--container label ~ input,
@@ -216,7 +228,7 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
     float: left;
     display: block;
     margin-right: $space-quarter;
-    max-height: 40px;
+    max-height: $navbar--height;
     max-width: 60px;
     position: relative;
 
@@ -237,6 +249,19 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 //------------------------------------------------------------------------------
 .navbar.navbar-horizontal {
 
+}
+
+
+//------------------------------------------------------------------------------
+// #NAVBAR-ELEMENT-CONDITIONALS
+//------------------------------------------------------------------------------
+.navbar.navbar-horizontal.navbar-fixed {
+
+  + header,
+  + main,
+  + section {
+    margin-top: $navbar--height;
+  }
 }
 
 
