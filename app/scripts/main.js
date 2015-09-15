@@ -8,6 +8,7 @@ $( document ).ready(function() {
   disabledLinksBehaviour.init(); // disabled links are not clickable
   tabsBehaviour.init(); // enable responsive tabs
   dropdownsBehaviour.init(); // enable dropdowns
+  scrollcoverBehaviour.init(); // disable hover effects on scroll
   navbars.init(); // enable navbar functionality
 
   styleGuide.init(); // enable style-guide animations

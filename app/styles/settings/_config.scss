@@ -29,9 +29,10 @@ $global--font-color:                  $black-flag;
 //------------------------------------------------------------------------------
 // #GRID-CONFIG
 // Set up for the grid system.
+// Match your columns if you only want one grid system
 //------------------------------------------------------------------------------
 $global--max-width-of-grid:           $trenta;
-$global--amount-of-columns-desktop:   12;
+$global--amount-of-columns-desktop:   6;
 $global--amount-of-columns-tablet:    8;
 $global--amount-of-columns-mobile:    6;
 $space-for-grid-adjustment:           $space-quarter;
@@ -60,7 +61,7 @@ $use--ordering-helpers:               'true';
 
 
 //------------------------------------------------------------------------------
-// #FORMS
+// #FORMS-CONFIG
 //------------------------------------------------------------------------------
 $global--border-animation:            2px;
 
@@ -76,6 +77,13 @@ $global--buttons-icon:                'true';
 
 
 //------------------------------------------------------------------------------
+// #LINKS-CONFIG
+// Set up which styles of links are needed.
+//------------------------------------------------------------------------------
+$global--links-colour:                $base;
+
+
+//------------------------------------------------------------------------------
 // #CARDS-CONFIG
 // Set up how depth you want the card levels to go
 //------------------------------------------------------------------------------
@@ -87,3 +95,10 @@ $global--card-border:                 2px;
 // #IMAGES-CONFIG
 //------------------------------------------------------------------------------
 $global--image-border:                4px;
+
+
+//------------------------------------------------------------------------------
+// #PAGINATION-CONFIG
+// Set up for pagination size
+//------------------------------------------------------------------------------
+$global--pagination-width:            250px;

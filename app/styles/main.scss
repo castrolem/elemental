@@ -16,6 +16,7 @@
 @import 'helpers/clearfix.scss';
 @import 'helpers/functions.scss';
 @import 'helpers/mixins.scss';
+@import 'helpers/scrollcover.scss';
 
 //------------------------------------------------------------------------------
 // #GENERICS
@@ -43,6 +44,7 @@
 @import 'objects/typography.scss';
 @import 'objects/forms.scss';
 @import 'objects/buttons.scss';
+@import 'objects/links.scss';
 @import 'objects/tables.scss';
 @import 'objects/images.scss';
 
@@ -53,6 +55,8 @@
 @import 'components/tabs.scss';
 @import 'components/callouts.scss';
 @import 'components/navbars.scss';
+@import 'components/paginations.scss';
+@import 'components/pager.scss';
 
 //------------------------------------------------------------------------------
 // #PATTERN-LIBRARY

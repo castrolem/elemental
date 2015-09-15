@@ -1,0 +1,61 @@
+//------------------------------------------------------------------------------
+// #PAGINATIONS
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+
+$pagination--width:                  $global--pagination-width;
+
+
+//------------------------------------------------------------------------------
+// #GENERAL
+//------------------------------------------------------------------------------
+
+.pagination-centered {
+  .pagination {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.pagination {
+  @include list-reset();
+  justify-content: space-around;
+  max-width: $pagination--width;
+
+  &,
+  li {
+    display: flex;
+  }
+
+  li {
+    flex-direction: column;
+  }
+
+  a {
+    @include single-transition();
+    padding: $pad-half $pad*.75;
+    border: 1px solid transparent;
+    display: block;
+    border-radius: $global--border-animation;
+
+    &:hover {
+      border-color: $mist;
+      background-color: $mist;
+      color: white;
+    }
+
+    &:focus,
+    &.current {
+      border-color: $base;
+      background-color: $base;
+      color: white;
+    }
+
+    &.unavailable {
+      color: $mist;
+      pointer-events: none;
+    }
+  }
+
+}
