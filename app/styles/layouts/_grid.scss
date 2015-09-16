@@ -57,7 +57,7 @@ $calc--with: 100%;
 //------------------------------------------------------------------------------
 @media (max-width: $venti) {
   @for $i from 1 through $global--amount-of-columns-tablet {
-    .column-tablet-#{$i}-#{$global--amount-of-columns-tablet} {
+    .column-md-#{$i}-#{$global--amount-of-columns-tablet} {
       $width: ($calc--with / $global--amount-of-columns-tablet) * $i;
 
       flex-basis: $width;
@@ -70,9 +70,20 @@ $calc--with: 100%;
 //------------------------------------------------------------------------------
 // #MOBILE-COLUMNS
 //------------------------------------------------------------------------------
+@media (max-width: $grande) {
+  @for $i from 1 through $global--amount-of-columns-mobile {
+    .column-sm-#{$i}-#{$global--amount-of-columns-mobile} {
+      $width: ($calc--with / $global--amount-of-columns-mobile) * $i;
+
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+}
+
 @media (max-width: $tall) {
   @for $i from 1 through $global--amount-of-columns-mobile {
-    .column-mobile-#{$i}-#{$global--amount-of-columns-mobile} {
+    .column-xs-#{$i}-#{$global--amount-of-columns-mobile} {
       $width: ($calc--with / $global--amount-of-columns-mobile) * $i;
 
       flex-basis: $width;
