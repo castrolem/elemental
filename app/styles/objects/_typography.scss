@@ -168,18 +168,17 @@ ol.no-style {
 // #COLOURS FOR TEXTS
 //------------------------------------------------------------------------------
 
-// .base     { color: $base; }
-// .accent   { color: $accent; }
-// .success  { color: $success--colour; }
-// .error    { color: $error--colour; }
-// .disabled { color: $disabled--colour; }
-// .white    { color: $white; }
+.base     { color: $base;    }
+.accent   { color: $accent;  }
+.valid    { color: $valid;   }
+.warning  { color: $warning; }
+.error    { color: $error;   }
 
 
 //------------------------------------------------------------------------------
 // #HELPERS FOR TEXTS
 //------------------------------------------------------------------------------
 
-.text-center  { text-align: center; }
-.text-left    { text-align: left; }
-.text-right   { text-align: right; }
+.text-center  { text-align: center;   }
+.text-left    { text-align: left;     }
+.text-right   { text-align: right;    }

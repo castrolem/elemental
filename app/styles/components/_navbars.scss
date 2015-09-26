@@ -204,6 +204,7 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
 .navbar.navbar-fixed {
   position: fixed;
+  transform: translateZ(0);
   z-index: z($index-list, 'navbar-fixed');
 }
 

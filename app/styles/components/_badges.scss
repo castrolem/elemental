@@ -1,40 +1,33 @@
 //------------------------------------------------------------------------------
-// #DROPDOWNS
+// #BADGES
 //------------------------------------------------------------------------------
 // #VARIABLES
 //------------------------------------------------------------------------------
-$dropdowns--background-colour: white;
+$badges--max-height:                        20px;
+
 
 //------------------------------------------------------------------------------
 // #GENERAL
 //------------------------------------------------------------------------------
-.dropdown-toggle {
-  @extend .button;
+.badge {
+  background-color: $coat;
+  border-radius: $global--badges-border;
+  color: white;
+  display: inline-block;
+  line-height: $badges--max-height;
+  padding: ($pad*.05) $pad-half;
+
+  &.base     { background-color: $base;    }
+  &.accent   { background-color: $accent;  }
 }
 
-.dropdown {
-  @extend .card-depth-1;
-  @extend .card;
-  @include invisible();
-  @include list-reset();
-  pointer-events: none;
-  padding: $pad-half;
-  overflow: hidden;
-  will-change: transform;
-
-  &.active {
-    @include invisible($state: false);
-    min-width: round($short / 1.5);
-    pointer-events: inherit;
-  }
-}
 
 //------------------------------------------------------------------------------
-// #ANIMATIONS
+// #SUP
 //------------------------------------------------------------------------------
-.dropdown.with__animations {
-
-  .active {
-
-  }
+.badge.sup {
+  line-height: $badges--max-height / 2;
+  font-size: calc-percent(10px, $global--font-size);
+  vertical-align: super;
+  padding: $pad-quarter
 }
