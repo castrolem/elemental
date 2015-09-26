@@ -1,0 +1,33 @@
+//------------------------------------------------------------------------------
+// #BADGES
+//------------------------------------------------------------------------------
+// #VARIABLES
+//------------------------------------------------------------------------------
+$badges--max-height:                        20px;
+
+
+//------------------------------------------------------------------------------
+// #GENERAL
+//------------------------------------------------------------------------------
+.badge {
+  background-color: $coat;
+  border-radius: $global--badges-border;
+  color: white;
+  display: inline-block;
+  line-height: $badges--max-height;
+  padding: ($pad*.05) $pad-half;
+
+  &.base     { background-color: $base;    }
+  &.accent   { background-color: $accent;  }
+}
+
+
+//------------------------------------------------------------------------------
+// #SUP
+//------------------------------------------------------------------------------
+.badge.sup {
+  line-height: $badges--max-height / 2;
+  font-size: calc-percent(10px, $global--font-size);
+  vertical-align: super;
+  padding: $pad-quarter
+}
