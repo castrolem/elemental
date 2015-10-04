@@ -3,8 +3,9 @@
 //------------------------------------------------------------------------------
 // #VARIABLES
 //------------------------------------------------------------------------------
-$amount-of-cards:               $global--card-depth;
-$card-border:                   $global--card-border;
+$amount-of-cards:                   $global--card-depth;
+$card-border:                       $global--card-border;
+$card-horizontal-element-height:    $global--card-horizontal-elem-height;
 
 //------------------------------------------------------------------------------
 // #CARDS-GENERAL
@@ -14,17 +15,12 @@ $card-border:                   $global--card-border;
   border-radius: $card-border;
   display: flex;
   flex-direction: column;
-  min-height: 200px;
   overflow: hidden;
   position: relative;
   z-index: z($index-list, 'cards');
 
   > .card {
     padding: $pad;
-  }
-
-  @media (min-width: $venti) {
-    min-width: 330px;
   }
 }
 
@@ -39,5 +35,26 @@ $card-border:                   $global--card-border;
     box-shadow: 0 2px 2px 0 rgba($black-flag, .14),
                 0 3px 1px -2px rgba($black-flag, .2),
                 0 #{$i}px (3px * $i) rgba($black-flag, .28);
+  }
+}
+
+//------------------------------------------------------------------------------
+// #CARDS-CONTEXT-ELEMENTS
+//------------------------------------------------------------------------------
+
+%card-bar-element {
+  background-color: rgba($mist, .2);
+  padding: $pad-quarter $pad;
+  min-height: $global--card-horizontal-elem-height / 2;
+}
+
+.card {
+
+  > header {
+    @extend %card-bar-element;
+  }
+
+  > footer {
+    @extend %card-bar-element;
   }
 }

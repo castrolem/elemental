@@ -81,6 +81,7 @@ $global--buttons-flat:                'true';
 $global--buttons-raised:              'true';
 $global--buttons-link:                'true';
 $global--buttons-icon:                'true';
+$global--button-size:                 39px;
 
 
 //------------------------------------------------------------------------------
@@ -96,6 +97,7 @@ $global--links-colour:                $base;
 //------------------------------------------------------------------------------
 $global--card-depth:                  8;
 $global--card-border:                 2px;
+$global--card-horizontal-elem-height: $global--button-size;
 
 
 //------------------------------------------------------------------------------
