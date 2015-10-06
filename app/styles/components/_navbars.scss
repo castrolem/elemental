@@ -154,7 +154,6 @@ $navbar--will-collapse-colour:        lighten($navbar--active-links-colour, 5%);
 
 .navbar-dropdown-menu {
   @extend .card-depth-1;
-  @extend .card;
   @include list-reset();
   background-color: $navbar--background-colour;
   display: none;
