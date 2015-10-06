@@ -36,11 +36,19 @@
         2,
         "single"
       ],
-      "camelcase": 1
+      "camelcase": 1,
+      "no-unused-vars": 0
     },
     "globals":{
         "jQuery": false,
-        "$": true
+        "$": true,
+        "buttonAnimation": true,
+        "disabledLinksBehaviour": true,
+        "tabsBehaviour": true,
+        "dropdownsBehaviour": true,
+        "scrollcoverBehaviour": true,
+        "navbars": true,
+        "styleGuide": true
     }
   }
 }
