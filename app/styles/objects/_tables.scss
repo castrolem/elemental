@@ -11,6 +11,13 @@ table {
     padding-bottom: 3px;
   }
 
+  th,
+  td {
+    &:first-of-type {
+      text-align: left;
+    }
+  }
+
   th {
     color: rgba($black-flag, .5);
     font-size: 95%;
@@ -18,14 +25,10 @@ table {
     height: 48px;
     letter-spacing: 0;
     line-height: 24px;
-    padding-bottom: 8px;
+    padding: 8px 18px;
     position: relative;
     text-overflow: ellipsis;
     vertical-align: bottom;
-
-    &:first-of-type {
-      padding-left: 24px;
-    }
   }
 
   tbody {
@@ -42,11 +45,11 @@ table {
     height: 48px;
     padding: 12px 18px;
     position: relative;
-    text-align: right;
+    text-align: center;
     vertical-align: middle;
   }
+}
 
-  .non-numeric {
-    text-align: left;
-  }
+.numeric {
+  text-align: right;
 }
