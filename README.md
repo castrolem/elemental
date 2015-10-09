@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/castrolem/elemental.svg)](https://travis-ci.org/castrolem/elemental)
-
 # Elements Framework
 It's a CSS framework that's sleek and powerful for faster and easier web development of beautiful UI's and with UX in mind, coded with SASS, available to download in both SASS (with SCSS) and CSS compiled.
 
